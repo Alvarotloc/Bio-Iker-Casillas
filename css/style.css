@@ -14,21 +14,23 @@ html{
 body{
   font-size: 16px;   /* Esto lo que hace es que 1rem equivalga a 10px */
   background-color: var(--fondo);
-  height: 100vh;
+  min-height: 100vh;
 }
 header{
     width: 100%;
     padding: 5vh 0;
+}
+.flex{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 #main{
     width: 100%;
     font-family: 'Lato', sans-serif;
     color: var(--primario);
-    display:flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
     text-align: center;
 }
 
@@ -39,10 +41,37 @@ header{
 #title{
     margin-bottom: .7rem;
 }
+#img-top{
+    background-image: url(https://cnnespanol.cnn.com/wp-content/uploads/2019/09/190912235308-iker-casillas-debut-futbol-espana-real-madrid-deportes-cnn-00000003-full-169.jpg?quality=100&strip=info);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+    width: 95%;
+    margin-bottom: 10rem;
+}
 #tribute-info{
-    min-width: 60%;
-    padding: 5rem;
+    padding: 5rem 1rem;
     background-color: var(--fondo-secundario);
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem .2rem rgba(89, 1, 107, 0.5);
+}
+#list{
+    width: 50%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#list li{
+    text-align: left;
+}
+#list li:not(:first-child){
+    margin-top: 4rem;
+}
+.date{
+    font-weight: 700;
 }
 #more-info{
     margin: 2rem 0;
@@ -68,4 +97,5 @@ header{
   }
 #img-caption{
     max-width: 30rem;
+    margin: 2rem 0;
 }
