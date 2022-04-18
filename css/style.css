@@ -1,3 +1,8 @@
+:root{
+    --fondo:#0D0C22;
+    --fondo-secundario:#252446;
+    --primario:#F3E3DF;
+}
 *{
   margin:0;
   padding:0;
@@ -7,9 +12,60 @@ html{
   font-size: 62.5%;
 }
 body{
-  font-size: 16px;
-  background-image: linear-gradient(to top, rgb(216, 216, 216), rgb(255,255,255));
-  background-repeat: no-repeat;
+  font-size: 16px;   /* Esto lo que hace es que 1rem equivalga a 10px */
+  background-color: var(--fondo);
   height: 100vh;
-  /* Esto lo que hace es que 1rem equivalga a 10px */
+}
+header{
+    width: 100%;
+    padding: 5vh 0;
+}
+
+#main{
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    color: var(--primario);
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+}
+
+#title, #sub-title{
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+#title{
+    margin-bottom: .7rem;
+}
+#tribute-info{
+    min-width: 60%;
+    padding: 5rem;
+    background-color: var(--fondo-secundario);
+}
+#more-info{
+    margin: 2rem 0;
+}
+#tribute-link{
+    color: rgb(209, 3, 209);
+    transition: color 0.4s ease;
+}
+#tribute-link:hover{
+    color: rgb(160, 5, 160);
+}
+#img-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 45rem;
+    width: 100%;
+}
+#image {
+    height: 100%;
+    margin: 0 auto;
+    filter: grayscale(80%);
+  }
+#img-caption{
+    max-width: 30rem;
 }
